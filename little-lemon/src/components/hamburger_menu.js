@@ -15,7 +15,7 @@ const HamburgerMenu = () => {
         <div></div>
         <div></div>
       </button>
-      <div className={isOpen ? "nav-links open" : "nav-links"}>
+      <div className={isOpen ? "mobile-nav-links open" : "mobile-nav-links"}>
         <ul>
           <li><a href="/home">Home</a></li>        
           <li><a href="/blog">Menu</a></li>  
