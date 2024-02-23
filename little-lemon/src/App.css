@@ -3,12 +3,9 @@
 }
 
 .navbar {
-  /* background-color: #f8f9fa; */
-  /* border-bottom: 1px solid #e7e7e7; */
   padding: 10px 0;
   display: flex;
   justify-content: flex-start;
-  ;
 }
 
 .navbar-icon img {
@@ -22,12 +19,12 @@
   display: flex;
   justify-content: space-around;
   width: 70%;
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 ul {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   list-style-type: none;
   width: 70%;
 }
@@ -38,7 +35,6 @@ a {
 }
 
 /* Header section */
-
 .header {
   position: relative;
   background-color: #495e57;
@@ -51,20 +47,7 @@ a {
   border-radius: 5px;
 }
 
-.title {
-  color: #f4ce14;
-  font-size: 2em;
-  margin-left: 250px;
-}
-
-.sub-title {
-  font-size: 1.5em;
-  margin-left: 250px;
-}
-
-.p-description {
-  width: 17%;
-  color: aliceblue;
+.title, .sub-title, .p-description, .btn {
   margin-left: 250px;
 }
 
@@ -74,13 +57,11 @@ a {
   color: black;
   padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 15px;
-  margin-left: 250px;
 }
 
 .header img {
@@ -93,10 +74,9 @@ a {
 }
 
 /* Main section */
-
-.menu-title{
+.menu-title {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   margin-top: 120px;
   height: 60px;
 }
@@ -107,12 +87,7 @@ a {
   color: #495e57;
 }
 
-.menu-title button {
-  margin-right: 40px;
-}
-
 /* Card container */
-
 .card-container {
   display: flex;
   justify-content: center;
@@ -133,7 +108,7 @@ a {
   height: auto;
 }
 
-.card .price {
+.card .price, .card p {
   color: #888;
   margin: 10px 0;
 }
@@ -143,13 +118,14 @@ a {
   text-decoration: none;
 }
 
-.card p {
-  color: #888;
-  margin: 10px 0;
-}
+/* Media Queries */
 
-/* Media query for mobile devices */
+/* Mobile Devices */
 @media screen and (max-width: 600px) {
+  
+  .header {
+    height: 300px;
+  }
   .navbar-icon img {
     margin-left: 10px;
     width: 100px;
@@ -167,8 +143,12 @@ a {
     flex-direction: column;
     width: 100%;
   }
+/* style links to be less in size */
+  a {
+    font-size: 0.8em;
+  }
 
-  .title, .sub-title, p, .btn {
+  .title, .sub-title, .p-description, .btn {
     margin-left: 10px;
   }
 
@@ -177,10 +157,115 @@ a {
   }
 
   .header img {
-    position: static;
-    height: auto;
-    width: 100%;
-    right: auto;
-    bottom: auto;
+    display: none; /* Ensures the image is hidden on mobile devices */
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 801px) {
+  .navbar-icon img {
+    margin-left: 50px; 
+    width: 123px; 
+  }
+
+  .nav-links, .nav-links ul {
+    justify-content:end;
+    gap: 13px;
+    margin-right: 30px;
+  }
+
+  a {
+    font-size: 0.7em;
+  }
+
+  .title, .sub-title, .p-description {
+    margin-left: 20px; 
+  }
+
+  .p-description {
+    font-size: 0.7em;
+    width: 40%; 
+  }
+
+  .header {
+    width: 92%;
+    height: 250px; 
+  }
+  .header img {
+    right: 5%;
+    width: 220px; 
+    height: 280px; 
+    margin-bottom: 40px;
+  }
+
+  .menu-title{
+    margin-top: 40px;
+    align-items: flex-end;
+  }
+
+
+  .menu-title h1 {
+    margin-top: -70px;
+    font-size: 1.5em; 
+  }
+
+  .btn{
+    margin-left: 20px;
+    padding: 8px 18px; 
+    font-size: 0.7em;
+  }
+
+  .online-menu {
+    padding: 4px 14px;
+    margin-right: 30px; 
+  }
+  .card-container{
+    /* flex-direction: column; */
+    align-items: center;
+    gap: 10px;
+  }
+  .card{
+    border-radius: 10px;
+    width: 160px;
+  }
+  .card p {
+    font-size: 0.7em; 
+  }
+  .title-price {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    font-size: 0.8em; 
+  }
+  .card a {
+    margin-right: 32px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #495e57; 
+  }
+
+
+  .card img {
+    width: 140px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .navbar-icon img, .title, .sub-title, .p-description, .btn {
+    margin-left: 270px; /* Original positioning for desktop */
+  }
+
+  .header img {
+    /* Keep the original desktop positioning and sizing */
+    right: 450px;
+    bottom: -100px;
+    height: 460px;
+    width: 380px;
   }
 }
