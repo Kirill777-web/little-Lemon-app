@@ -614,7 +614,7 @@ a {
 
   .online-menu {
     padding: 10px 20px;
-    margin-right: -45px;
+    margin-right: -60px;
   }
   .card-container {
     margin-top: 100px;
@@ -623,7 +623,7 @@ a {
   }
   .card {
     border-radius: 10px;
-    width: 190px;
+    width: 200px;
   }
   .card p {
     font-size: 1em;
