@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
 import '../App.css';
 
 const HamburgerMenu = () => {
@@ -17,11 +18,11 @@ const HamburgerMenu = () => {
       </button>
       <div className={isOpen ? "mobile-nav-links open" : "mobile-nav-links"}>
         <ul>
-          <li><a href="/home">Home</a></li>        
-          <li><a href="/blog">Menu</a></li>  
-          <li><a href="/blog">Reservations</a></li>  
-          <li><a href="/blog">Order Online</a></li>  
-          <li><a href="/blog">Login</a></li>  
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/menu">Menu</Link></li>
+          <li><Link to="/reservations">Reservations</Link></li>
+          <li><Link to="/order-online">Order Online</Link></li>
+          <li><Link to="/login">Login</Link></li>
         </ul>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import React from "react";
+import { Link } from "react-router-dom";
 const Card = ({ title, price, description, imgSrc }) => {
   return (
     <div className="card">
@@ -7,7 +9,7 @@ const Card = ({ title, price, description, imgSrc }) => {
       <p className="price">{price}</p>
       </div>
       <p>{description}</p>
-      <a href="#">Order a delivery ↪</a>
+      <Link to="/order-online">Order a delivery ↪</Link>
     </div>
   );
 };

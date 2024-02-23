@@ -1,12 +1,14 @@
 import React from 'react';
 import Card from './card';
+import { Link } from 'react-router-dom';
+
 
 const Main = () => {
   return (
     <main className="main">
       <div className='menu-title'>
         <h1>This weeks specials !</h1>
-        <button className='btn online-menu'>Online menu</button>
+        <Link to="/order-online" className='btn online-menu'>Online menu</Link>
       </div>
       <div className="card-container">
         <Card 
@@ -22,9 +24,9 @@ const Main = () => {
           imgSrc="/assets/pasta_alfredo.jpg"
         />
         <Card 
-          title="Steak"  
+          title="Steak and Fries"  
           price="$19.99" 
-          description="Juicy steak cooked to perfection. Served with fries potatoes" 
+          description="Juicy steak cooked to perfection. Served with fries potatoes and a side of vegetables." 
           imgSrc="/assets/steak.jpg"
         />
 

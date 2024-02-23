@@ -540,6 +540,7 @@ a {
   }
   .card p {
     font-size: 0.9em;
+    margin-bottom: 70px;
   }
   .title-price {
     display: flex;
@@ -623,7 +624,8 @@ a {
   }
   .card {
     border-radius: 10px;
-    width: 200px;
+    width: 250px;
+    height: 390px;
   }
   .card p {
     font-size: 1em;
@@ -635,7 +637,8 @@ a {
     font-size: 1.1em;
   }
   .card a {
-    margin-right: 45px;
+    margin-top: 40px;
+    margin-right: 65px;
     font-size: 1.1em;
     font-weight: bold;
     color: #495e57;
