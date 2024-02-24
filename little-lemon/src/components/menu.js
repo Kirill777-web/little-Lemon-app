@@ -14,7 +14,7 @@ const Menu = () => {
       <header className="header">
         <h1 className='title'>Little Lemon</h1>
         <p className='sub-title'>New Brunswick</p>
-        <p className='p-description'>Our mission is to provide you with the best dining experience. We offer a variety of dishes and drinks that are sure to satisfy your taste buds. We look forward to serving you!</p>
+        <p className='p-description'>At Little Lemon, we're more than just a restaurant; we're a haven for food lovers. Join us for an unforgettable dining experience where the food, atmosphere, and service come together in perfect harmony. Explore our menu today and let your taste buds embark on a voyage of discovery.</p>
         <Link to="/reservations" className='btn'>Reserve a Table</Link>
         <img src="/assets/menu.jpg" alt="logo" />
       </header>

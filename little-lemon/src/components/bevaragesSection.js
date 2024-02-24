@@ -7,20 +7,29 @@ const Beverage = ({ items }) => {
   const [activeDot, setActiveDot] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = scrollContainer.current.scrollLeft;
-      const containerWidth = scrollContainer.current.offsetWidth;
-      const totalScrollWidth = scrollContainer.current.scrollWidth;
-      const totalPages = Math.ceil(totalScrollWidth / containerWidth);
+  const handleScroll = () => {
+    const scrollPosition = scrollContainer.current.scrollLeft;
+    const containerWidth = scrollContainer.current.offsetWidth;
+    const totalScrollWidth = scrollContainer.current.scrollWidth;
+    const totalPages = Math.ceil(totalScrollWidth / containerWidth);
 
-      const currentPage = Math.round(scrollPosition / containerWidth);
-      setActiveDot(currentPage);
-    };
+    const currentPage = Math.round(scrollPosition / containerWidth);
+    setActiveDot(currentPage);
+  };
 
+  // Check if scrollContainer.current exists before adding the event listener
+  if (scrollContainer.current) {
     scrollContainer.current.addEventListener('scroll', handleScroll);
+  }
 
-    return () => scrollContainer.current.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Cleanup function
+  return () => {
+    // Also check if scrollContainer.current exists before removing the event listener
+    if (scrollContainer.current) {
+      scrollContainer.current.removeEventListener('scroll', handleScroll);
+    }
+  };
+}, []); 
 
   return (
     <div className="menu-wrapper">

@@ -7,34 +7,37 @@ import Footer from './components/footer';
 import HamburgerMenu from './components/hamburger_menu';
 import OrderOnline from './components/orderOnline';
 import Reservation from './components/reservation';
-import './App.css';
 import LoginForm from './components/login';
 import Menu from './components/menu';
+import './App.css';
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <HamburgerMenu />
-        <div className='navbar-section'>
-          <Navbar />
+        <div className="content">
+          <HamburgerMenu />
+          <div className='navbar-section'>
+            <Navbar />
+          </div>
+          <Routes>
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/order-online" element={<OrderOnline />} />
+            <Route path="/reservations" element={<Reservation />} />
+            <Route path="/login" element={<LoginForm />} />
+            <Route path="/" element={
+              <>
+                <div className='header-section'>
+                  <Header />
+                </div>
+                <div className='main-section'>
+                  <Main />
+                </div>
+              </>
+            } />
+          </Routes>
         </div>
-        <Routes>
-          <Route path="/menu" element={<Menu />} />
-          <Route path="/order-online" element={<OrderOnline />} />
-          <Route path="/reservations" element={<Reservation />} />
-          <Route path="/login" element={<LoginForm />} />
-          <Route path="/" element={
-            <>
-              <div className='header-section'>
-                <Header />
-              </div>
-              <div className='main-section'>
-                <Main />
-              </div>
-            </>
-          } />
-        </Routes>
+        
         <div className='footer-section'>
           <Footer />
         </div>

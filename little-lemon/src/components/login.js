@@ -30,7 +30,7 @@ const LoginForm = () => {
         <p className='p-description'>
           Join us on a journey of taste, crafted with care and served with passion. Your next culinary adventure is just a login away. We're excited to welcome you back and make your dining experience more enjoyable and tailored to your tastes. Log in now and let the flavors of Little Lemon elevate your day.
         </p>
-        <img src="/assets/reservation.jpg" alt="Little Lemon" />
+        <img src="/assets/login.jpg" alt="Little Lemon" />
       </header>
 
     <section className="login-form-section">

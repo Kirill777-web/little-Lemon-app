@@ -1,15 +1,23 @@
-html, body {
-  height: 100%;
+html, body, #root, .App {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-body {
+.content {
+  min-height: calc(100vh - 60px);
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -142,14 +150,14 @@ a {
 
 /* Footer */
 .p-footer {
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
-.footer {
-  position: relative;
+.footer-section {
   width: 100%;
   height: 60px;
   background-color: #f2f2f2;
+
 }
 
 /* Media Queries */
@@ -585,6 +593,7 @@ a {
     width: 160px;
     border-radius: 10px;
   }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -644,7 +653,8 @@ a {
     margin-right: -60px;
   }
   .card-container {
-    margin-top: 100px;
+    margin-top: 60px;
+    margin-bottom: 50px;
     align-items: center;
     gap: 25px;
   }
@@ -660,7 +670,7 @@ a {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 25px;
+  margin-bottom: 100px;
     font-size: 1em;
   }
   .title-price {
@@ -668,6 +678,7 @@ a {
     justify-content: space-around;
     align-items: center;
     font-size: 0.8em;
+    
   }
   .card a {
     margin-top: 40px;
@@ -681,4 +692,6 @@ a {
     width: 170px;
     border-radius: 10px;
   }
+
+
 }
