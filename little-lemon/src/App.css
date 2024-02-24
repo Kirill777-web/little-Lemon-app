@@ -648,7 +648,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 0.9em;
   }
   .card a {
     margin-top: 40px;
