@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Appetizers from './appetizers';
-import { appetizers } from './menuItems'; // Ensure this import path is correct
+import Soup from './soupsSection';
+import Salads from './saladsSections';
+import Entrees from './entreesSection';
+import Desserts from './dessertsSection';
+import Beverage from './bevaragesSection';
+import { appetizers, soups, salads, entrees, desserts, beverages  } from './menuItems'; // Ensure this import path is correct
 
 const Menu = () => {
   return (
@@ -14,6 +19,11 @@ const Menu = () => {
         <img src="/assets/menu.jpg" alt="logo" />
       </header>
       <Appetizers items={appetizers} />
+      <Soup items={soups} />
+      <Salads items={salads} />
+      <Entrees items={entrees} />
+      <Desserts items={desserts} />
+      <Beverage items={beverages} />
     </main>
   );
 };
