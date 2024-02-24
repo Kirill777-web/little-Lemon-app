@@ -178,14 +178,14 @@ export const beverages = [
   {
     id: 'beverage-2',
     title: 'Iced Tea',
-    description: 'Refreshing iced tea brewed with a hint of peach or raspberry flavor.',
+    description: 'Refreshing iced tea brewed with a hint of peach or raspberry flavor.Enjoy!',
     price: '$2.99',
     imgSrc: '/assets/iced-tea.jpg',
   },
   {
     id: 'beverage-3',
     title: 'Cappuccino',
-    description: 'Rich espresso topped with frothy milk and a sprinkle of cinnamon.',
+    description: 'Rich espresso topped with frothy milk and a sprinkle of cinnamon. Served hot or iced.',
     price: '$4.50',
     imgSrc: '/assets/cappuccino.jpg',
   },

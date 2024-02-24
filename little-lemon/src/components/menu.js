@@ -6,7 +6,7 @@ import Salads from './saladsSections';
 import Entrees from './entreesSection';
 import Desserts from './dessertsSection';
 import Beverage from './bevaragesSection';
-import { appetizers, soups, salads, entrees, desserts, beverages  } from './menuItems'; // Ensure this import path is correct
+import { appetizers, soups, salads, entrees, desserts, beverages  } from './menuItems';
 
 const Menu = () => {
   return (

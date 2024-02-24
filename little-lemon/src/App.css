@@ -148,6 +148,27 @@ a {
   text-decoration: none;
 }
 
+.add-to-cart {
+ border: none;
+ background-color: #f4ce14;
+  color: black;
+  padding: 10px 28px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  
+
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Footer */
 .p-footer {
   padding-top: 5px;
@@ -670,7 +691,7 @@ a {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
     font-size: 1em;
   }
   .title-price {

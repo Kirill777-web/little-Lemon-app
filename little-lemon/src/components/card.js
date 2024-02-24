@@ -27,7 +27,6 @@ const Card = ({ title, price, description, imgSrc, addToCart }) => {
         <p className="price">{price}</p>
       </div>
       <p>{description}</p>
-      {addToCart ? (
         <>
           <div className="quantity-controls">
             <button onClick={decreaseQuantity} className="icon-button">
@@ -40,9 +39,6 @@ const Card = ({ title, price, description, imgSrc, addToCart }) => {
           </div>
           <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
         </>
-      ) : (
-        <Link to="/order-online">Order a delivery ↪</Link>
-      )}
     </div>
   );
 };
