@@ -45,6 +45,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  margin-bottom: 25px;
 }
 
 .order-online-container .card .add-to-cart {
@@ -58,6 +59,7 @@
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 15px;
+  margin-top: 5px;
 
 }
 
@@ -108,4 +110,25 @@
 
 .active-dot {
   background-color: #717171;
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.quantity-controls span {
+  margin: 0 10px;
 }

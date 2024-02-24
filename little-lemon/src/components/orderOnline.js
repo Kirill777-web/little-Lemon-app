@@ -7,8 +7,18 @@ const OrderOnline = () => {
   const [activeDot, setActiveDot] = useState(0); // State to track the active dot
   const scrollContainer = useRef(null);
 
-  const addToCart = (item) => {
-    setCart((prevCart) => [...prevCart, item]);
+  const addToCart = (itemWithQuantity) => {
+    // Check if the item already exists in the cart
+    const existingItemIndex = cart.findIndex(item => item.id === itemWithQuantity.id);
+    if (existingItemIndex >= 0) {
+      // If the item exists, update its quantity
+      const newCart = [...cart];
+      newCart[existingItemIndex].quantity += itemWithQuantity.quantity;
+      setCart(newCart);
+    } else {
+      // If the item doesn't exist, add it to the cart
+      setCart((prevCart) => [...prevCart, itemWithQuantity]);
+    }
   };
 
  const onlineOrderItems = [
