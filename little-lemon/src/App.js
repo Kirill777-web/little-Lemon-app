@@ -9,6 +9,7 @@ import OrderOnline from './components/orderOnline';
 import Reservation from './components/reservation';
 import './App.css';
 import LoginForm from './components/login';
+import Menu from './components/menu';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Navbar />
         </div>
         <Routes>
+          <Route path="/menu" element={<Menu />} />
           <Route path="/order-online" element={<OrderOnline />} />
           <Route path="/reservations" element={<Reservation />} />
           <Route path="/login" element={<LoginForm />} />
