@@ -1,4 +1,3 @@
-// Create header component
 
 import React from 'react';
 
