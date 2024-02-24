@@ -1,4 +1,4 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import React from 'react';
 import Main from './components/main';
@@ -6,7 +6,9 @@ import Header from  './components/header';
 import Footer from './components/footer';
 import HamburgerMenu from './components/hamburger_menu';
 import OrderOnline from './components/orderOnline';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Reservation from './components/reservation';
+import './App.css';
+import LoginForm from './components/login';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         </div>
         <Routes>
           <Route path="/order-online" element={<OrderOnline />} />
+          <Route path="/reservations" element={<Reservation />} />
+          <Route path="/login" element={<LoginForm />} />
           <Route path="/" element={
             <>
               <div className='header-section'>
