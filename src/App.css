@@ -186,6 +186,7 @@ a {
 /* Mobile Devices */
 @media screen and (min-width: 345px) and (max-width: 430px) {
   .content {
+    min-height: calc(120vh - 60px);
     display: block;
   }
   .hamburger {
@@ -372,7 +373,7 @@ a {
 }
 .footer-section{
   width: 100%;
-  margin-bottom: -25px;
+  margin-bottom: -66px;
 }
 
 }
