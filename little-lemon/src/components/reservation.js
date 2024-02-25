@@ -19,12 +19,32 @@ const Reservation = () => {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e) => {
+// Here we're sending the reservation details to the server
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Process the reservation here (e.g., API call)
-    console.log(reservationDetails);
-    alert('Reservation submitted!');
+    console.log('Submitting reservations...', reservationDetails);
+    try{
+      const response = await fetch('api/reservations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(reservationDetails),
+      });
+
+      //Check if the response is ok
+      if (!response.ok) {
+        const data = await response.json();
+        console.log('Reservation successful:', data);
+        alert('Reservation successful!');
+      }else{
+        console.log('Reservation failed:', response.status);
+        alert('Reservation failed!');
+      }
+    } catch (error) {
+      console.error('Error submitting reservation:', error);
+      alert('Error submitting reservation!');
+    }
   };
 
   return (
