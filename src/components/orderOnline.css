@@ -137,20 +137,46 @@
 /* Media Queries */
 
 /* Mobile Devices: Show 1 card in view */
-@media screen and (max-width: 429px) {
+@media screen and (min-width: 345px) and (max-width: 430px) {
   .menu-wrapper {
-    width: 100vw; 
-    margin: auto;
+    width: 100%; /* Full width of the parent container */
+    margin: 0 auto; /* Center it */
+  }
+  .menu {
+    justify-content: start; /* Align items to the start of the container */
+    margin-top: 60px; /* Add some top margin if needed */
+  }
+  .menu-item {
+    width: 100%; /* Make the card take up the full width of the menu */
+    margin-right: 10px; /* Keep the original right margin if needed */
+  }
+  .dot-container {
+    padding: 1px; /* Keep the dots close */
+  }
+  .quantity-controls {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 345px) and (max-width: 429px) {
+  .menu-wrapper {
+    width: 90vw; 
   }
   .menu-item {
     width: 45%; 
-   
   }
-  .dot-container {
+  .menu{
+    margin-top: 60px;
+    margin-left: -20px;
+  
+  }
+   .dot-container {
     padding: 1px;
 }
- 
 }
+
+
 
 /* Mobile Devices: 430px to 600px, show 1 card */
 @media screen and (min-width: 430px) and (max-width: 600px) {
