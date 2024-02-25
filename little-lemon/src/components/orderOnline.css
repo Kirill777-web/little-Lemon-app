@@ -31,11 +31,12 @@
   flex-direction: column;
 }
 .order-online-container img {
- margin-left: 40px;
-  max-width: 100%;
-  height: auto;
-  display: block; 
-  position: static;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    position: static; 
+    margin-bottom: 50px;
 }
 
 .order-online-container .card p {
@@ -132,3 +133,54 @@
 .quantity-controls span {
   margin: 0 10px;
 }
+
+/* Media Queries */
+
+/* Mobile Devices: Show 1 card in view */
+@media screen and (max-width: 429px) {
+  .menu-wrapper {
+    width: 100vw; 
+    margin: auto;
+  }
+  .menu-item {
+    width: 45%; 
+   
+  }
+  .dot-container {
+    padding: 1px;
+}
+ 
+}
+
+/* Mobile Devices: 430px to 600px, show 1 card */
+@media screen and (min-width: 430px) and (max-width: 600px) {
+  .menu-wrapper {
+    width: 90vw; 
+  }
+  .menu-item {
+    width: 45%; 
+  }
+  .menu{
+    margin-top: 60px;
+    margin-left: -12px;
+  
+  }
+   .dot-container {
+    padding: 1px;
+}
+}
+
+@media screen and (min-width: 820px) and (max-width: 1180px){
+  .menu-wrapper{
+    margin-top: 100px;
+  }
+}
+
+/* Small Desktops: 801px to 1024px, show 3 cards */
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .menu-item {
+    width: 50%;
+  }
+  
+}
+

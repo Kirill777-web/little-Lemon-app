@@ -1,11 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Card from './card'; // Adjust the import path as necessary
-import './orderOnline.css'; // Reusing styles from OrderOnline
+import Card from './card'; 
+import './orderOnline.css'; 
 
 const Appetizers = ({ items }) => {
   const scrollContainer = useRef(null);
   const [activeDot, setActiveDot] = useState(0);
 
+  // Here we're adding a scroll event listener to the scrollContainer
   useEffect(() => {
   const handleScroll = () => {
     const scrollPosition = scrollContainer.current.scrollLeft;
@@ -16,21 +17,18 @@ const Appetizers = ({ items }) => {
     const currentPage = Math.round(scrollPosition / containerWidth);
     setActiveDot(currentPage);
   };
-
-  // Check if scrollContainer.current exists before adding the event listener
+// We're adding the event listener when the component mounts
   if (scrollContainer.current) {
     scrollContainer.current.addEventListener('scroll', handleScroll);
   }
-
-  // Cleanup function
+// We're removing the event listener when the component unmounts
   return () => {
-    // Also check if scrollContainer.current exists before removing the event listener
     if (scrollContainer.current) {
       scrollContainer.current.removeEventListener('scroll', handleScroll);
     }
   };
 }, []); 
-
+// We're adding the scroll event listener to the scrollContainer
   return (
     <div className="menu-wrapper">
       <h2 className="menu-category-title">Appetizers</h2>
