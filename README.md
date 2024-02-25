@@ -11,15 +11,17 @@ Little Lemon is a restaurant application designed to provide users with an excep
 - JavaScript
 
 ## App Link
-[Little Lemon on GitHub Pages](http)
+[Little Lemon](https://little-lemon-cafe.netlify.app/)
 
 ## Screenshots
-![Home Page](<link-to-screenshot-of-home-page>)
-![Menu Page](<link-to-screenshot-of-menu-page>)
-![Reservation Page](<link-to-screenshot-of-reservation-page>)
+![Home Page](./public/assets/home-page.png)
+![Menu Page](./public/assets/menupage.png)
+![Reservation Page](./public/assets/reservation.png)
+![Login Page](./public/assets/Login.png)
+
 
 ## Contributor
-- [Kirill Lazutin](<link-to-your-github-profile>) - Solo Developer
+- [Kirill Lazutin](https://github.com/Kirill777-web) - Solo Developer
 
 ## Credits
 - Photos provided by [Unsplash](https://unsplash.com/)
